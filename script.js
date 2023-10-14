@@ -3,37 +3,39 @@ var icon1 = document.getElementById("a");
 var icon2 = document.getElementById("b");
 var icon3 = document.getElementById("c");
 var nav = document.getElementById("nav");
-// var blue = document.getElementById("blue");
 
 icon.addEventListener("click", function () {
   icon1.classList.toggle("a");
   icon2.classList.toggle("c");
   icon3.classList.toggle("b");
   nav.classList.toggle("show");
-  // blue.classList.toggle("slide");
 });
 
-document.getElementById("searchButton").addEventListener("click", function () {
-  // Define the action you want to perform when the button is clicked
-  window.location.href = "./index2.html"; // Redirect to a new page
-  // Or, you can perform some other action here
-});
+     if (document.body.classList.contains("body__index--js")) {
+       document
+         .getElementById("searchButton")
+         .addEventListener("click", function () {
+           window.location.href = "./booking.html";
+         });
+     }
 
-const slides = document.querySelectorAll(".figure__hero");
-let currentSlide = 0;
+// Check if the HTML body has a specific class that identifies the page
+if (document.body.classList.contains("body__index--js")) {
+  const slides = document.querySelectorAll(".figure__hero");
+  let currentSlide = 0;
 
-function roll() {
-  slides[currentSlide].style.opacity = 0; // Hide the current slide
-  currentSlide = (currentSlide + 1) % slides.length; // Move to the next slide
-  slides[currentSlide].style.opacity = 1; // Show the next slide
+  function roll() {
+    slides[currentSlide].style.opacity = 0; // Hide the current slide
+    currentSlide = (currentSlide + 1) % slides.length; // Move to the next slide
+    slides[currentSlide].style.opacity = 1; // Show the next slide
 
-  setTimeout(roll, 5000); // Adjust the delay as needed
+    setTimeout(roll, 5000); // Adjust the delay as needed
+
+    // Initially show the first slide
+    slides[currentSlide].style.opacity = 1;
+  }
+  roll();
 }
-
-// Initially show the first slide
-slides[currentSlide].style.opacity = 1;
-
-roll();
 
 // Var for the stars to delete some html.
 var article__text = [
