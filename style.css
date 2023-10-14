@@ -13,14 +13,14 @@
 }
 /* compatibility for older Safari ect */
 
-@-webkit-keyframes slide {
+/* @-webkit-keyframes slide {
   0% {
     background-position: 0 100%;
   }
   100% {
     background-position: 0 0;
   }
-}
+} */
 
 /* Hamburger bar  */
 
