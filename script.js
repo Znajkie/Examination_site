@@ -19,25 +19,24 @@ icon.addEventListener("click", function () {
          });
      }
 
-// Check if the HTML body has a specific class that identifies the page
+
 if (document.body.classList.contains("body__index--js")) {
   const slides = document.querySelectorAll(".figure__hero");
   let currentSlide = 0;
 
   function roll() {
-    slides[currentSlide].style.opacity = 0; // Hide the current slide
-    currentSlide = (currentSlide + 1) % slides.length; // Move to the next slide
-    slides[currentSlide].style.opacity = 1; // Show the next slide
+    slides[currentSlide].style.opacity = 0;
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.opacity = 1;
 
-    setTimeout(roll, 5000); // Adjust the delay as needed
+    setTimeout(roll, 5000);
 
-    // Initially show the first slide
     slides[currentSlide].style.opacity = 1;
   }
   roll();
 }
 
-// Var for the stars to delete some html.
+// VAR loop to delete some repetitive html for reviews and to generate random reviews.
 if (document.body.classList.contains("body__index--js")) {
   var article__text = [
     "Pick your hotel with us, 5 stars with high-class rooms! We offer something to remember for life. Spa, pools, and more.",
@@ -61,15 +60,14 @@ if (document.body.classList.contains("body__index--js")) {
     elements[i].innerText = article__text[randomIndex];
   }
 
-  // Get all elements with the class "star-container"
   var starContainers = document.querySelectorAll(".article__stars");
 
   // Function to generate a random number of active stars
   function getRandomNumActiveStars() {
-    return Math.floor(Math.random() * 5) + 1; // Random number of active stars between 1 and 5
+    return Math.floor(Math.random() * 5) + 1;
   }
 
-  // Loop through each star container
+  // Loop through each star container.
   starContainers.forEach(function (starContainer) {
     var numActiveStars = getRandomNumActiveStars();
 
