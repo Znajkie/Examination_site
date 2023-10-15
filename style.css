@@ -11,16 +11,6 @@
     background-position: 0 0; /* End with the image at the top */
   }
 }
-/* compatibility for older Safari ect */
-
-/* @-webkit-keyframes slide {
-  0% {
-    background-position: 0 100%;
-  }
-  100% {
-    background-position: 0 0;
-  }
-} */
 
 /* Hamburger bar  */
 
@@ -168,8 +158,6 @@ nav {
 li {
   list-style: none;
   font-size: 16px;
-  color: #0a0707;
-  background: var(--secondary-color);
   text-align: center;
   padding: 0.92rem;
   backdrop-filter: blur(0.7px);
@@ -592,18 +580,18 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   top: 20%;
   left: 25%;
-  text-align: center;
+ 
   width: 50%;
   max-height: 40rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  background: rgba(255, 255, 255, 0.33);
+  background: rgba(133, 209, 219, 0.33);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(133, 209, 219, 0.30);
   overflow: auto;
   z-index: 2;
 }
@@ -624,6 +612,39 @@ section2__text--big {
 
 .section2__text p {
   font-weight: 100;
+}
+
+.ul__details {
+  display: flex;
+ align-items: center;
+  width: 45rem;
+  height: 7rem;
+}
+
+li {
+background-color: transparent;
+color: white;
+text-shadow: 0px 1px 21px rgba(0, 0, 0, 1);
+font-size: small;
+}
+
+.section2__details {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 45rem;
+}
+
+.payment-icons {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; 
+}
+
+h4 {
+  text-align: center; /* Center the text horizontally within the h4 element */
 }
 
 /* About page  */
@@ -670,7 +691,11 @@ section2__text--big {
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   }
   @media (max-width: 480px) {
-    /* smartphones, Android phones, landscape iPhone */
+       .section2 {
+    width: 80%;
+    left: 7.5%
+  }
+
   }
 
   @media (max-width: 768px) {
@@ -688,6 +713,7 @@ section2__text--big {
     }
   }
 
+ 
   @media (max-width: 850px) {
     .main {
       margin-top: 0rem;
