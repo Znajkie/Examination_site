@@ -51,6 +51,10 @@ html {
   text-align: center;
 }
 
+h4 {
+  text-align: center;
+}
+
 .h4--white {
   color: white;
   text-shadow: 0px 1px 21px rgba(0, 0, 0, 1);
@@ -158,8 +162,11 @@ nav {
 }
 
 li {
+  background-color: transparent;
+  color: white;
+  text-shadow: 0px 1px 21px rgba(0, 0, 0, 1);
   list-style: none;
-  font-size: 16px;
+  font-size: 12px;
   text-align: center;
   padding: 0.92rem;
   backdrop-filter: blur(0.7px);
@@ -568,7 +575,6 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   top: 20%;
   left: 25%;
- 
   width: 50%;
   max-height: 40rem;
   padding: 0.5rem;
@@ -587,11 +593,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-right: 1rem;
 }
 
-section2__text--big {
-  font-weight: 900;
-  font-size: xx-large;
-}
-
 .section2__text {
   font-weight: 900;
   text-align: start;
@@ -602,18 +603,8 @@ section2__text--big {
   font-weight: 100;
 }
 
-.ul__details {
-  display: flex;
- align-items: center;
-  width: 45rem;
-  height: 7rem;
-}
-
-li {
-background-color: transparent;
-color: white;
-text-shadow: 0px 1px 21px rgba(0, 0, 0, 1);
-font-size: small;
+.li--transparency {
+  background-color: rgba(133, 209, 219, 0.1);
 }
 
 .section2__details {
@@ -629,10 +620,6 @@ font-size: small;
   display: flex;
   align-items: center;
   justify-content: center; 
-}
-
-h4 {
-  text-align: center;
 }
 
 
